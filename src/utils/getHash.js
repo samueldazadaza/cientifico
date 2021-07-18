@@ -1,6 +1,6 @@
 //para devolver, no es necesario brackets
-const getHast = () =>
+const getHash = () =>
     location.hash.slice(1).toLocaleLowerCase().split('/')[1] || '/';    
     // ['', '1']
 
-export default getHast;
+export default getHash;
