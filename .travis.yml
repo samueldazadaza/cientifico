@@ -1,0 +1,20 @@
+languaje: node_js
+cahe:
+  directories:
+    - ~/.npm
+node_js:
+  - '12'
+git:
+  depth: 3
+script:
+  - yarm build
+deploy:
+  provider: pages
+  edge: true,
+  skip-cleanup: true
+  keep-history: $GITHUB_TOKEN
+  local-dir: dist/
+  target-branch: gh-pages
+  commit_message: "Deploy Release"
+  on:
+    branch: main
